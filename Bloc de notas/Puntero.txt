@@ -1,4 +1,98 @@
-Puntero
+				PASAJE POR VALOR.
+    
+
+
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+void muestra (int x, int y);
+
+int main ()
+{
+	int x,y;
+	printf("ingrese;");
+	scanf("%d", &x);
+	printf("ingrese;");
+	scanf("%d", &y);
+	muestra (x,y);
+	printf ("x:%d y: %d" , x , y);
+	return 0;
+}
+
+
+
+
+
+
+
+///////////PROGRAMA////////////////////
+
+
+void muestra (int x, int y)
+{
+x=y;
+printf ("x:%d y:%d", x, y);
+}
+
+(LOS NUEVOS X e Y ocupan un nuevo lugar de memoria diferente a MAIN).
+
+
+----------------------------------------------------------------------------------------
+
+
+			PASAJE POR REFERENCIA...
+
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+void muestra (int *x, int y);                     // ARMAS UN PUNTERO(PEDIS DIRECCIÓN DE MEMORIA.
+
+int main ()
+{
+	int x,y;
+	printf("ingrese;");
+	scanf("%d", &x);
+	printf("ingrese;");
+	scanf("%d", &y);
+	muestra (&x,y);                           // LE DI LA DIRECCIÓN AL PROGRAMA.
+	printf ("x:%d y: %d" , x , y);
+	return 0;
+}
+
+
+
+
+
+
+
+///////////PROGRAMA/////////////////
+
+void muestra (int *x, int y)                    // LE PEDI LA DIRECCIÓN A MAIN.
+{
+*x=y;						//EL DATO DE "Y" ES PARA  LA DIRECCIÒN DMEMORIA DE X (EL PUNTERO TIENE INDIRECCIÓN). ENTONCES
+printf ("x:%d y:%d", x, y);			EL VALOR DE Y PASA A LA INDIRECCIÓN DE X. (POR ENDE MODIFICAS EL VALOR ORIGINAL).
+}
+
+
+
+
+---------------------------------------------------------------------------------------------------------------
+
+			PUNTERO...
+
+
+
+
+
+
+(EJ DE USO, CUANDO EN LA FUNCION QUE NOSOTROS HICIMOS PODEMOS MODIFICIAR ALGO EN MAIN).
+
+
+
 
 int nro;
 int *n; / el asterisco define un PUNTERO. (en vez de guardar un dato entero guarda una dirección de memoria donde HAY un entero.
