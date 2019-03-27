@@ -1,0 +1,20 @@
+Puntero
+
+int nro;
+int *n; / el asterisco define un PUNTERO. (en vez de guardar un dato entero guarda una dirección de memoria donde HAY un entero.
+
+
+
+
+		dir           dato
+int nro;	0x100		3
+int *n		0x104	      0x100
+
+nro=3;
+n=&nro;
+
+printf("%d",nro); // valor de nro
+printf("%p",n);// ver dirección
+printf ("%d", *n) // va a buscar el dato de la dirección que muestra la variable.
+
+
