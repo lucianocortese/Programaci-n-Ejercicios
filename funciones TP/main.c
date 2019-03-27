@@ -3,6 +3,14 @@
 
 int main()
 {
-    printf("Hello world!\n");
-    return 0;
+    int num;
+    int factoreado;
+
+    do
+    {
+    printf("Que numero quiere ingresar?\n");
+    scanf ("%d", num);
+    } (while num<=0 )
+
+
 }

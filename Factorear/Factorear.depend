@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1553696229 source:c:\users\alumno\desktop\programaci-n-ejercicios\factorear\main.c
+	<stdio.h>
+	<stdlib.h>
+
