@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1554165075 source:c:\users\lucho\desktop\utn\programaci-n-ejercicios\funciones tp\tp.c
+
+1554164931 source:c:\users\lucho\desktop\utn\programaci-n-ejercicios\funciones tp\calculadora\main.c
+	<stdio.h>
+	<stdlib.h>
+	"C:\Users\Lucho\Desktop\UTN\Programaci-n-Ejercicios\funciones TP\tp.h"
+
+1554164922 c:\users\lucho\desktop\utn\programaci-n-ejercicios\funciones tp\tp.h
+	<stdio.h>
+

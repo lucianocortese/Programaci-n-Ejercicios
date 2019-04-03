@@ -1,0 +1,21 @@
+# depslib dependency file v1.0
+1554080911 source:c:\users\lucho\desktop\utn\programaci-n-ejercicios\clase 4\programas\programas.c
+	<stdio.h>
+	<stdlib.h>
+
+1554081687 source:c:\users\lucho\desktop\utn\programaci-n-ejercicios\clase 4\programas\main.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	"programas.h"
+
+1554078134 c:\users\lucho\desktop\utn\programaci-n-ejercicios\clase 4\programas\programas.h
+
+1554081895 source:c:\users\lucho\desktop\utn\programaci-n-ejercicios\clase 4lab\ejercicios\programas\main.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	"programas.h"
+
+1554078134 c:\users\lucho\desktop\utn\programaci-n-ejercicios\clase 4lab\ejercicios\programas\programas.h
+
