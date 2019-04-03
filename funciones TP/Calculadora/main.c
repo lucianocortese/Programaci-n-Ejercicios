@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "C:\Users\Lucho\Desktop\UTN\Programaci-n-Ejercicios\funciones TP\tp.h"
+#include "tp.h"
 
 int main()
 {
