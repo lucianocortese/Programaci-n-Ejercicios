@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1554303993 source:c:\users\alumno\desktop\programaci-n-ejercicios\clase 6 lab\cadena de caracteres\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
