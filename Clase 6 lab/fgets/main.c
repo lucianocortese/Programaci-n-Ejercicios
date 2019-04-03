@@ -11,7 +11,8 @@ int main()
     //fgets(buffer, 62, stdin);
     fgets(buffer,sizeof(buffer)-2,stdin);
 
-    cantidad = strlen(buffer);
+    cantidad = strlen(buffer); // DEVUELVE CANTIDAD DE CARACTERES DE UNA CARRERA
+
 
     buffer[cantidad-1] = '\0';
 
