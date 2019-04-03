@@ -35,6 +35,9 @@ int main()
     // cantidad = strcmp(cadena1, cadena2);    // NO DIFERENCIA MAYUS DE MINUS.
 
 
+    //strcpy (cad1, cad2)                       //contenido de primer parametro pasa al segundo.
+
+
 
 
     return 0;
