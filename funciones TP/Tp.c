@@ -30,16 +30,26 @@ float multiplicacion (float num1,  float num2)
     return multiplicacion;
 }
 
-int factorial (float num1)
+
+int factorial (int num)
 {
-    int fact
-    fact=(int)num1;
+    float acumulador;
+    acumulador=1;
 
-    while(fact>0)
-    if (fact=!1)
+    for (num;num>=1;num--)
     {
-
+        if(acumulador==1)
+        {
+            acumulador=num;
+        }
+        else
+        {
+            acumulador=acumulador*num;
+        }
     }
+
+    return acumulador;
 }
+
 
 

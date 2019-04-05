@@ -37,3 +37,13 @@ float division (float num1,  float num2);
  *
  */
 float multiplicacion (float num1,  float num2);
+
+
+/** \brief Conseguir el factorial de un numero
+ *
+ * \param Numero del cual se quiere saber el factorial
+ * \return factorial del numero ingresado
+ *
+ */
+
+int factorial (int num);

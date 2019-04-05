@@ -1,14 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
-int factorear (int num);
+int factorear (float num);
 
 int main()
 {
-    int numero;
+    float numero;
 
     do{
        printf("ingrese un numero positivo\n");
-       scanf("%d", &numero);
+       scanf("%f", &numero);
         }while (numero<0);
 
         printf("El resultado es %d", factorear(numero));
@@ -16,20 +16,24 @@ int main()
     return 0;
 }
 
-int factorear (int num)
+int factorear (float num)
 {
-    int resp;
-    resp=1;
-    for(num; num!=0; num--)
+    int numero;
+    numero=(int)num;
+    int fact;
+    fact=1;
+    for(numero; numero!=0; numero--)
     {
-        if (resp==1)
+        if (fact==1)
         {
-            resp=num;
+            fact=numero;
         }
         else
         {
-            resp= resp*num;
+            fact= fact*numero;
         }
+
+        return numero;
     }
-    return resp;
+
 }
