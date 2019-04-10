@@ -1,6 +1,36 @@
 #include <stdio.h>
 #include <stdlib.h>
+struct datosPersonales{
+    char nombre[25];
+    char apellido[25];
+    char calle[30];
+    int numero;
+    };
 
+int main()
+{
+    struct datosPersonales vecAgenda[3], vecAmigos[3], vecTrabajo[3] ;
+
+    printf("********************AGENDA********************\n\n");
+    for(int i=0; i<3; i++)
+    {
+        printf("\n\nIngrese nombre ");
+        gets (vecAgenda[i].nombre);
+        printf("Ingrese apellido ");
+        gets (vecAgenda[i].apellido);
+        printf("Ingrese calle ");
+        gets (vecAgenda[i].calle);
+        printf("Ingrese numero ");
+        scanf("%d", &vecAgenda[i].numero);
+        fflush(stdin);
+    }
+
+
+    return 0;
+}
+
+
+/*ESTRUCTURA 4
 
 struct datosPersonales{ //la estructra se declara previo al main
     char nombre[25];
@@ -11,7 +41,7 @@ struct datosPersonales{ //la estructra se declara previo al main
 
 int main(){
 
-struct datosPersonales vecAgenda[3];
+struct datosPersonales vecAgenda[3];// EL VECTOR ES DEL TIPO ESTRUCTURAS QUE TIENE ADENTRO DISTINTOS TIPOS.
 
 for (int i=0; i<3; i++){
 
@@ -34,11 +64,10 @@ for(int j=0; j<3; j++)
 
 return 0;
 };
+*/
 
 
-
-/*
-                                ESTRUCTURA 3
+/*ESTRUCTURA 3
 
 struct datosPersonales{ //la estructra se declara previo al main
     char nombre[25];
@@ -88,8 +117,7 @@ int main ()
 
 
 
-/*
-                    ESTRUCTURA 2.
+/*ESTRUCTURA 2.
 
 struct datosPersonales{ //la estructra se declara previo al main
     char nombre[25];
@@ -123,7 +151,7 @@ int main()                                  //Base de datos. Conjunto de tablas
 
 
 
-/* ESTRUCTURA 1 ANALIZADA
+/*ESTRUCTURA 1
 
 struct datosPersonales{ //la estructra se declara previo al main
     char nombre[25];
