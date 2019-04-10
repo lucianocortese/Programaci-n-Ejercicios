@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1554399621 source:c:\users\lucho\desktop\utn\programacion\clase 4lab\ejercicios\programas\programas.c
+	<stdio.h>
+	<stdlib.h>
+
+1554688280 source:c:\users\lucho\desktop\utn\programacion\clase 5prog\ej\ejercicio 5 campus\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"C:\Users\Lucho\Desktop\UTN\Bibliotecas\get b\get.h"
+
+1554399621 c:\users\lucho\desktop\utn\programacion\clase 4lab\ejercicios\programas\programas.h
+
+1554684113 source:c:\users\lucho\desktop\utn\bibliotecas\get b\get.c
+	<stdio.h>
+	<stdlib.h>
+
+1554683890 c:\users\lucho\desktop\utn\bibliotecas\get b\get.h
+
