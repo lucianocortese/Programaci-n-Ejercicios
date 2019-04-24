@@ -1,0 +1,55 @@
+
+
+***     5 variables = eEmpleado, eSector, eFecha, eMenu, eAlmuerzo. (5 sectores y 10 menues).
+	La inicializacion se hace por una funcion de hardcodeo.
+	main.c-  empleado.c(desarrollo de funciónes principales)  -  empleado.h (brief D-oxy) - "INPUT.C" - "INPUT.H".  (EN EMPLEADOS METEMOS TODAS LAS ESTRUCTURAS).
+	TRABAJAR CON CONTADOR PARA AUMENTAR Y DISMINUIR EN ALTA Y BAJA (No listar ni bajar si no hay ALTA).
+	isEmpty = 1.
+	
+
+ACLARACIONES PREVIAS
+
+empleado |    sector
+  1..* 		1(el empleado solo tiene un sector).
+
+  
+
+
+RELACION DE POCOS A MUCHOS....
+
+VIENDO ESE RAZONAMIENTO. SUMAS En EL TYPEDEF sumas un (INT SECTOR ID QUE GUARDA EL ID DEL SECTOR).
+AL DAR EL ALTA SE TIENEN QUE VISUALIZAR LOS SECTORES PARA DAR EL DATO (SOLO CON EL ID DE SECTOR).
+
+DOS FOR= (FOR [sectores]I( ES EL MAS SIGNIFICATIVO PORQUE ES ""POR SECTOR""; FOR [empleados]J; If(I==J).
+
+
+
+RELACION DE MUCHOS A MUCHOS...
+
+empleado |     menu      | almuerzo
+  1..*		1...*
+
+se agrega una tercer estructura que los iguale (eAlmuerzo).
+
+
+typedef struct{
+eEmp legajo;
+eMenu codigo;
+eFecha 
+}eAlmuerzo;
+
+TRES FOR: I; J; K.
+
+
+POR cada EMPLEADO los menu que comieron
+
+Empleados(i) - almuerzo(j) - menu (k);
+
+
+me paro en empleado con el legajo busco en almuerzo (if legajo corresponde a el legajo que vaya a buscar la comida del codigo que pertenece a ese empleado);
+
+HASTA EL PARCIAL: ---el tamaño de almuerzo es la cantidad de empleados/menu. (LA CANTIDAD MAXIMA POSIBLE QUE PUEDE TENER "ALMUERZO").
+
+(ALTA ALMUERZO). RECORRO LOS EMPLEADOS Y LOS MUESTRO Y ELIJO. LO MISMO CON MENU Y DESPUES LA FECHA. 
+
+LEGAJO AUTOINCREMENTAL.
