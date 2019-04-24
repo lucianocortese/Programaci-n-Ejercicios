@@ -15,7 +15,8 @@ typedef struct{
    }eFecha;
 typedef struct{
     int legajo;
-    char vNombre[20];
+    char vNombre[51];
+    char vApellido [51];
     char sexo;
     float sueldo;
     eFecha alta;
@@ -49,6 +50,7 @@ int main()
     eEmpleados lista [TAM_EMP]={{1, "lucho", 'm', 20000},{2, "miguel", 'm', 25000},{3, "juana", 'f', 30000}};
     int menu;
     char resp='n';
+    int contLegajo;
 
 
     do{
@@ -119,8 +121,37 @@ int buscarvacio (eEmpleados lista[], int tam){
     }
     return vacio;
 }
+int altaEmpleado (eEmpleados lista [], int tam, int contLegajo){
+
+    int vacio;
+
+    vacio=buscarvacio(lista, tam);
+
+    if(vacio==-1){
+        printf("No hay lugar libre");
+    }
+    else{
+
+        printf("Ingresar nombre: ");
+        fflush(stdin);
+        fgets(lista[vacio].vNombre, sizeof(lista[vacio].vNombre-1), (stdin));
+
+        printf("Ingrese el apellido: ");
+        fflush(stdin);
+        fgets(lista[vacio].vApellido, sizeof(lista[vacio].vApellido-1), (stdin));
+
+        printf("Elija el sexo: ");
 
 
+
+
+
+
+
+    }
+    contLegajo ++;
+    return contLegajo;
+}
 
 
 
