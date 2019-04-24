@@ -2,14 +2,17 @@
 #include <stdlib.h>
 #include <conio.h>
 #include <string.h>
-typedef struct
-{
+#define TAM_EMP 3
+#define TAM_SEC 5
+#define TAM_MENU 20
+#define TAM_ALM 20000
+
+typedef struct{
     int dia;
     int mes;
     int anio;
 
    }eFecha;
-
 typedef struct{
     int legajo;
     char vNombre[20];
@@ -19,17 +22,11 @@ typedef struct{
     int idSector;
     int isEmpty;
 }eEmpleados;
-
-typedef struct
-{
+typedef struct{
     int id;
     char vDescripcion[51];
 }eSector;//Hardcodear
-
-
-
-typedef struct
-{
+typedef struct{
     int codigo;
     char vDescripcion[51];
     float importe;
@@ -43,12 +40,92 @@ typedef struct{
 }eAlmuerzo;//Hardcodear
 
 
+void mostrarEmpleado (eEmpleados lista[], int ind);
+void mostrarEmpleados (eEmpleados lista[], int tam);
 
 int main()
 {
 
+    eEmpleados lista [TAM_EMP]={{1, "lucho", 'm', 20000},{2, "miguel", 'm', 25000},{3, "juana", 'f', 30000}};
+    int menu;
+    char resp='n';
+
+
+    do{
+        printf("Menu ABL Empleados\n");
+        printf("1-Alta de Empleados\n");
+        printf("2-Modificar empleados\n");
+        printf("3-Bajar empleados\n");
+        printf("4-Ordenar empleados\n");
+        printf("5-Listar empleados\n");
+        printf("6-Alta almuerzos\n");
+        printf("0-Salir\n");
+        scanf("%d", &menu);
+
+        switch(menu)
+        {
+            case 1:
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+            case 4:
+                break;
+            case 5:
+                mostrarEmpleados(lista, TAM_EMP);
+                break;
+            case 6:
+                break;
+            case 0:
+                printf("Estas seguro que deseas salir? s/n");
+                fflush(stdin);
+                scanf("%c", &resp);
+                break;
+            default:
+                printf("La opcion no es correcta, intente nueva opcion");
+                break;
+
+        }
+
+
+    }while(resp!='s');
+
+
     return 0;
 }
+
+
+void mostrarEmpleado (eEmpleados lista[], int ind){
+    printf("%d   %s   %c  %f", lista[ind].legajo, lista[ind].vNombre, lista[ind].sexo, lista[ind].sueldo);
+}
+void mostrarEmpleados (eEmpleados lista[], int tam){
+        for(int i=0; i<tam; i++)
+        {
+            mostrarEmpleado(lista, i);
+        }
+}
+void inicializarEmpleados (eEmpleados lista[], int tam){
+    for(int i=0; i<tam; i++){
+        lista[i].isEmpty=1;
+    }
+}
+int buscarvacio (eEmpleados lista[], int tam){
+    int vacio;
+    for (int i=0;i<tam;i++){
+        if(lista[i].isEmpty == 1){
+            vacio=i;
+        }
+    }
+    return vacio;
+}
+
+
+
+
+
+
+
 
 
 //void init(eSector sectores[], tamSec);     protipo.
