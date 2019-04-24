@@ -22,7 +22,7 @@ typedef struct{
 
 typedef struct
 {
-    int id
+    int id;
     char vDescripcion[51];
 }eSector;//Hardcodear
 
@@ -60,4 +60,4 @@ for(i=0;i<0;i++);
     {sectores[i].id = sec[i].id
     strcpy (sectores[i].descrupcion, sec [i].descripcion);
 
-
+*/
