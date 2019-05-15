@@ -3,16 +3,18 @@
 
 int main()
 {
+
     char letra= 'b';
-    char* punteroUno = &letra;
-    char** doblePuntero =&punteroUno;
-    char*** triplePuntero =&doblePuntero;
-    char**** cuadruplePuntero=&triplePuntero;
-    char***** quintupePuntero=&cuadruplePuntero;
-    char****** sextuplePuntero=&quintupePuntero;
+    char  * punteroUno=&letra;
+    char  ** doblePuntero=&punteroUno;
+    char  *** triplePuntero=&doblePuntero;
+    char  **** cuadruplePuntero=&triplePuntero;
+    char  ***** quintupePuntero=&cuadruplePuntero;
+    char  ****** sextuplePuntero=&quintupePuntero;
     char******* septimoPuntero=&sextuplePuntero;
     char******** octavoPuntero=&septimoPuntero;
     char********* novenoPuntero=&octavoPuntero;
+    char********** decimoPuntero=&novenoPuntero;
 
     printf("%c\n",letra);
     printf("%c\n",*punteroUno);
@@ -24,8 +26,7 @@ int main()
     printf("%c\n",*******septimoPuntero);
     printf("%c\n",********octavoPuntero);
     printf("%c\n",*********novenoPuntero);
-
-
+    printf("%c\n",**********decimoPuntero);
 
     return 0;
 }

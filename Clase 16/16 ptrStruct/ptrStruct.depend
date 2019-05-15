@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1507680706 source:c:\ptrstruct\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1507680706 
+
+1526483169 source:/home/alumno/Documentos/Programacion/Clase 16/16 ptrStruct/main.c
+	<stdio.h>
+	<stdlib.h>
+
