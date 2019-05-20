@@ -1,0 +1,23 @@
+Un puntero variable que conoce ubicaciòn fisica. Solo sabiendo la ubicación a pesar de no tener visibilidad.
+Usar como parametro el puntero a una función para poder escribirla.
+
+otro uso: Apuntar a variables creadas dinamicamente. (las creo sobre la marcha). 
+
+SEGMENTOS DE MEMORIA-   *cuadro pdf memoria dinamica*...
+
+codigo - memoria estatica - Heap (montón) - xxx--MEMORIA LIBREE---xx - stack (pila).
+
+Stack (pila)= llamadas, parametros, funcion y las variables locales de las funciones.
+
+Heap= espacio de memoria dinamica.
+
+stdlib. 
+
+malloc :memory allocate.
+
+void* malloc(unsigned int bytes);
+
+void*= puntero generico, puntero virgen.
+
+
+

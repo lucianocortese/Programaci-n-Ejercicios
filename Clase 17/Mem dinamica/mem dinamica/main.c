@@ -37,28 +37,42 @@ int main()
             printf("Escriba un numero: ");
             scanf("%d", (pVec+i));
         }
-
+            printf("\n");
         for(int i=0;i<8;i++){
         //Recorres y mostras los valores.
             printf("%d ", *(pVec+i));
             printf(".");
         }
-        int* pAux;
-        pAux=pNum;
 
-        pAux=(int*)realloc (pNum, sizeof(int)*15);
+
+
+        int* pAux;
+
+        pAux=pVec;
+
+        pAux=(int*)realloc (pVec, sizeof(int)*15);
+        //extendes la cantidad de espacio en memoria
+        //busca mas lugar en donde está y devuelve el viejo lugar de memoria
+        //si no hay lugar en donde estaba lo pasa a un nuevo lugar y devuelve el nuevo lugar de memoria
+        //si no encuentra lugar devuelve Null.
+        //El auxiliar existe porque de no encontrar lugar y devolver null. Si dejasemos el puntero que ya tenemos lo perderiamos.
+        //-por ese motivo con el auxiliar no perdemos ese valor
+
         if(pAux!=NULL){
-            pNum=pAux;
+            pVec=pAux;
+            //Si pAux no es Null podes darle el valor del auxiliar a la variable con la que trabajamos
         }
         else{
             printf("No hay lugar en memoria");
             exit(1);
+            //exit: termina el programa en ejecución.
         }
 
+
         for(int i=8;i<15;i++){
-        //Recorres y pedis el ingreso de numeros
+        //Recorres y pedis el ingreso de numeros desde el que habias dejado con malloc.
         // No usa "&", ya la variable puntero guardauna direccion de memoria
-            printf("\nEscriba los numeros siguientes ");
+            printf("Escriba los numeros siguientes ");
             scanf("%d", (pVec+i));
         }
 
@@ -67,5 +81,25 @@ int main()
             printf("%d ", *(pVec+i));
             printf(".");
         }
+
+
+
+        //FUNCIÓN CALLOC-------------
+
+        int* vector;
+
+        vector = (int*) calloc(10,sizeof(int)*10);
+        for(int i=0;i<10;i++){
+
+        printf("%d, ", *(vector+i));
+
+
+        }
+
+
+
+
+
+
     return 0;
 }
