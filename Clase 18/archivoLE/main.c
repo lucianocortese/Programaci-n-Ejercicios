@@ -14,7 +14,7 @@ int main (void)
    struct a pers;
    int cant;
 
-   if ((bin=fopen(ARCH,"rb+"))==NULL){
+   if ((bin=fopen(ARCH,"rb+"))==NULL){ //doble modo de escritura
       if ((bin=fopen(ARCH,"wb+"))==NULL){
          printf("No se pudo abrir el archivo");
          exit(1);
@@ -23,20 +23,23 @@ int main (void)
 
    do{
       printf("\nIngrese el nombre: ");
-      gets(pers.nombre);
+      scanf("%s",pers.nombre);
 
       printf("Ingrese la edad: ");
       scanf("%d",&pers.edad);
 
-      fflush(stdin);
-      fseek(bin , 0L, SEEK_END);
+      setbuf(stdin, NULL);
+      fseek(bin , 0L, SEEK_END);//tres tipos de parametros:
+                                //Nombre del archivo
+                                //SEEK_SET(del prinicpio), SEEK CUR(desde donde está actualmente, SEEK END(fin del archivo);
+                                //0L (0 es la cantidad de bytes que se va a mover) (la "L" es de long.
       fwrite(&pers,sizeof(pers),1,bin);
 
       printf("\nPresione ESC para terminar");
-   }while((getche())!=ESC);
+   }while((scanf("%c"))!=ESC);
 
    //se lleva el indicador de posición al principio para comenzar a leer
-   rewind (bin);
+   rewind (bin);//para poder leer tenes que rebobinar (lo llevas al comienzo del archivo.
 
    while(!feof(bin)){
       cant = fread(&pers,sizeof(pers),1,bin);
@@ -55,7 +58,6 @@ int main (void)
    }
 
    fclose(bin);
-   getch();
 
    return 0;
 }
