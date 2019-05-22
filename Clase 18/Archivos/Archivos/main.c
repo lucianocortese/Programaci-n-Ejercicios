@@ -10,7 +10,7 @@ struct a{
 		int isEmpty;
 	};
 
-void getss(char *cadena);
+int getts(char *cadena);
 
 int main (void)
 {
@@ -45,7 +45,7 @@ int main (void)
       fwrite(&pers,sizeof(pers),1,bin);
 
       printf("\nPresione ESC para terminar");
-   }while((gets(val))==ESC);
+   }while((getts(val*));
 
    /* Busqueda */
    system("clear");
@@ -104,11 +104,11 @@ int main (void)
    fclose(bin);
 }
 
-void gets(char *cadena){
+int getts(char *cadena){
 
 	scanf("%[^\n]", cadena);
 
-	return;
+	return 1;
 
 }
 
