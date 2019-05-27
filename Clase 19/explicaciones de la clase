@@ -1,0 +1,13 @@
+EXPRESIONES REGULARES.
+
+fscanf(f, "%d, %...
+
+...
+[^,](ACA AGARRA TODO HASTA LA COMA).
+
+atoi(parseint) ascii to int
+atof(parsefloat) ascii to float
+
+buffer es un lugar donde esta todo momentaneamente acumulado.
+buffer limbo.
+
