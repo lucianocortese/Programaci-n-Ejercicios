@@ -11,3 +11,9 @@ atof(parsefloat) ascii to float
 buffer es un lugar donde esta todo momentaneamente acumulado.
 buffer limbo.
 
+declarar vector dinamico [50];
+hago una variable del vector que se llama lista, que guarda en memoria estatica la direccion de memoria dinamica.
+en cada iteracion de while
+
+a donde vamos========  ****hacer un array a 50 punteros de estructuras.
+
