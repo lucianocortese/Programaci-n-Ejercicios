@@ -26,3 +26,18 @@ int main()
   cant = fscanf (f, "%[^,]%[^,]%[^,]%[^\n]", atoi (cad1), cad2, cad3, atof(cad4));
    return 0;
 }
+
+
+eEmpleado* new_Empleado(int leg, char* nombre, char* apellido, float sueldo){
+
+eEmpleado* emp= (eEmpleado*)malloc (sizeof(eEmpleado));
+
+if(emp!=NULL){
+emp->legajo = 0;
+strcpy (emp->nombre, "");
+strcpy (emp->apellido, "");
+emp->sueldo=0;
+
+}
+
+}
