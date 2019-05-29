@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1559003449 source:/home/lucho/Escritorio/UTN/programacion/Bibliotecas/input.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	"input.h"
+
+1556735405 /home/lucho/Escritorio/UTN/programacion/Bibliotecas/input.h
+
+1559093190 source:/home/lucho/Escritorio/UTN/programacion/Tp2/tp2/main.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	"/home/lucho/Escritorio/UTN/programacion/Bibliotecas/input.h"
+
