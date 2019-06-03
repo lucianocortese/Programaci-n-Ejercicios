@@ -16,7 +16,6 @@ int getInt(int* input,char message[],char eMessage[], int lowLimit, int hiLimit)
 
         if( (entero>=lowLimit) && (entero<=hiLimit) ){
             flag=0;
-            printf("El numero fue cargado con exito\n\n");
             *input=entero;
         }
         else{
@@ -38,7 +37,6 @@ int getFloat(float* input,char message[],char eMessage[], float lowLimit, float 
             if(decim>=lowLimit && decim<=hiLimit){
 
                     flag=0;
-                    printf("El numero fue cargado con exito\n\n");
                     *input=decim;
                 }
             else{
@@ -65,7 +63,6 @@ int getChar(char* input,char message[],char eMessage[], char lowLimit, char hiLi
             {
                 flag=0;
                 *input=letra;
-                printf("El caracter fue cargado con exito \n\n");
 
             }
             else{
@@ -91,7 +88,6 @@ int getString(char* input,char message[],char eMessage[], int lowLimit, int hiLi
         largo=strlen(string);
 
             if(largo>=lowLimit&&largo<=hiLimit){
-                printf("La cadena fue cargado con exito \n\n");
                 flag=0;
                 strcpy(input, string);
             }

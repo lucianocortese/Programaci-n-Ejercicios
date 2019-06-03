@@ -1,0 +1,2 @@
+void pausa ();
+void clscreen ();

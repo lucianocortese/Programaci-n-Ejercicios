@@ -56,3 +56,31 @@
 	"input.h"
 	"socios.h"
 
+1559178587 source:/home/lucho/Escritorio/UTN/programacion/Parciales/PARCIAL 1/main.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	"input.h"
+	"socios.h"
+
+1557170297 /home/lucho/Escritorio/UTN/programacion/Parciales/PARCIAL 1/input.h
+
+1559176172 /home/lucho/Escritorio/UTN/programacion/Parciales/PARCIAL 1/socios.h
+	"socios.h"
+
+1557293937 source:/home/lucho/Escritorio/UTN/programacion/Parciales/PARCIAL 1/socios.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	"input.h"
+	"socios.h"
+
+1558666830 source:/home/lucho/Escritorio/UTN/programacion/Parciales/PARCIAL 1/input.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	"input.h"
+

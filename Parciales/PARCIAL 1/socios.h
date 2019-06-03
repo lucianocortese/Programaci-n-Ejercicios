@@ -32,7 +32,6 @@ eFecha fechaAsociado;
 int isEmpty;
 }eSocios;
 
-apellidoAutor
 typedef struct {//PRESTAMO
 int idPrestamo;
 int idLibro;
