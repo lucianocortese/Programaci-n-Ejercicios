@@ -44,6 +44,10 @@ int altaEmpleados (eEmpleados lista [], int tam, int contId);
  * \param tamSoc es el tamaño de socios para recorrerlo
  *
  **/
+
+
+
+ float promedioSalarios (eEmpleados lista [], int tam);
  /*
 
 void ordenarPorApellido (eSocios socios[], int tamSoc);

@@ -3,6 +3,7 @@
 #include <ctype.h>
 #include <string.h>
 #include "input.h"
+#include "sistem.h"
 #include "arregloEmpleados.h"
 
 
@@ -10,13 +11,15 @@ int inicializarEmpleados (eEmpleados lista[], int tam){
     int funciona=-1;
     for(int i=0; i<tam; i++){
         lista[i].isEmpty=1;
+        lista[i].id=-1;
         int funciona=0;
-        return funciona;
     }
+
+        return funciona;
 }
 void mostrarEmpleado (eEmpleados lista[], int ind){
 
-    printf(" %d    %s %s    %f   %d    \n\n", lista[ind].id, lista[ind].apellido, lista[ind].nombre, lista[ind].sueldo, lista[ind].sector);
+    printf(" %d    %10s %10s    %12.2f   %6d    \n\n", lista[ind].id, lista[ind].apellido, lista[ind].nombre, lista[ind].sueldo, lista[ind].sector);
 }
 int buscarVacio (eEmpleados lista[], int tam){
     int vacio=-1;
@@ -42,15 +45,15 @@ int altaEmpleados (eEmpleados lista [], int tam, int contId){
 
         lista[vacio].id=contId;
 
-        getString(lista[vacio].nombre, "Ingrese el nombre (maximo 51 caracteres):", "Se exedió en la cantidad de caracteres, pruebe nuevamente", 0, 51);
+        getString(lista[vacio].nombre, "Ingrese el nombre :", "Demasiado largo, no puede pasar los 51 caracteres, pruebe nuevamente", 0, 51);
 
-        getString(lista[vacio].apellido, "Ingrese el apellido (maximo 51 caracteres):", "Se exedió en la cantidad de caracteres, pruebe nuevamente", 0, 51);
+        getString(lista[vacio].apellido, "Ingrese el apellido :", "Demasiado largo, no puede pasar los 51 caracteres, pruebe nuevamente", 0, 51);
 
-        getFloat(&lista[vacio].sueldo, "ingrese el salario", "Error", 0,999999999);
+        getFloat(&lista[vacio].sueldo, "Ingrese el salario", "Error", 0,999999999);
 
-        getInt(&lista[vacio].sector, "Ingrese el sector del 0 al 10", "El sector no puede ser negativo",0, 10);
+        getInt(&lista[vacio].sector, "Ingrese el sector del 1 al 5", "El sector no puede ser negativo",1, 5);
 
-        getInt(&lista[vacio].isEmpty, "Elija una opción 0=alta, 1=baja", "No es una opción", 0,1);
+        getInt(&lista[vacio].isEmpty, "Elija una opción [0-alta / 1-baja]", "No es una opción", 0,1);
 
     }
     contId ++;
@@ -78,17 +81,14 @@ void modificarSocios (eEmpleados lista[], int tam){
     scanf("%d", &idIndicado);
     existe=buscarEmpleado(lista,tam,idIndicado);
 
-    if(existe==-1){
-        printf("el empleado no existe\n");
+    if (existe == -1){
+        printf("El empleado no existe\n ");
     }
-    if(existe!=-1){
-    for(int i=0; i<tam; i++){
-        if(lista[i].id==idIndicado){
-           existe=i;
-           break;
-        }
-    }
+    if (existe != -1){
+
         printf("El empleado existe\n");
+
+        printf("ID  -         Nombre        -    Sueldo   -   Sector\n");
         mostrarEmpleado(lista, existe);
         printf("Elija que desea modificar\n");
         printf("1-Apellido\n");
@@ -100,19 +100,19 @@ void modificarSocios (eEmpleados lista[], int tam){
 
         switch (mod){
             case 1:
-                getString(lista[idIndicado].apellido, "Ingrese el nuevo apellido (maximo 51 caracteres):", "Se exedió en la cantidad de caracteres, pruebe nuevamente", 0, 31);
+                getString(lista[existe].apellido, "Ingrese el nuevo apellido (maximo 51 caracteres):", "Se exedió en la cantidad de caracteres, pruebe nuevamente", 0, 31);
                 printf("El apellido se cambió con exito");
                 break;
             case 2:
-                getString(lista[idIndicado].nombre, "Ingrese el nuevo nombre (maximo 51 caracteres):", "Se exedió en la cantidad de caracteres, pruebe nuevamente", 0, 31);
+                getString(lista[existe].nombre, "Ingrese el nuevo nombre (maximo 51 caracteres):", "Se exedió en la cantidad de caracteres, pruebe nuevamente", 0, 31);
                 printf("El nombre se cambió con exito \n");
                 break;
             case 3:
-                getInt(&lista[idIndicado].sector, "ingrese el nuevo Sector", "Error, debe ser del 1 al 10", 1,10);
+                getInt(&lista[existe].sector, "Ingrese el nuevo Sector", "Error, debe ser del 1 al 5", 1,5);
                 printf("El sector ya fue modificado exitosamente\n");
                 break;
             case 4:
-                getInt(&lista[idIndicado].sueldo, "Ingrese el nuevo Sueldo", "El Sueldo no puede ser negativo",0, 99999999);
+                getFloat(&lista[existe].sueldo, "Ingrese el nuevo Sueldo", "El Sueldo no puede ser negativo",0, 99999999);
                 printf("El sueldo se cambió con exito");
                 break;
             case 0:
@@ -123,6 +123,7 @@ void modificarSocios (eEmpleados lista[], int tam){
                 break;
         }
     }
+
 }
 void bajaEmpelado (eEmpleados lista[], int tam){
 
@@ -148,9 +149,11 @@ void bajaEmpelado (eEmpleados lista[], int tam){
             if(resp=='S'){
                 lista[encontrado].isEmpty=1;
                 printf("La baja se hizo con exito\n\n");
+                pausa();
             }
             else{
                 printf("No se hizo la baja\n");
+                pausa();
             }
 
     }
@@ -206,4 +209,27 @@ void ordenarPorApellido (eEmpleados lista[], int tam){
     }
 
     mostrarEmpleados(lista, tam);
+}
+float promedioSalarios (eEmpleados lista [], int tam){
+    float promedio;
+    float acumulador=0;
+    int contador =0;
+
+    for (int i=0; i<tam;i++){
+        if (lista[i].isEmpty==0){
+
+            acumulador = acumulador + lista[i].sueldo;
+            contador++;
+
+        }
+
+    }
+
+
+    promedio=acumulador/contador;
+
+    printf("\nEl total de todos los salarios es %2.f:\n", acumulador);
+    printf("El promedio total es %2.f.:\n", promedio);
+
+    return promedio;
 }

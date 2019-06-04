@@ -16,6 +16,7 @@ int main()
     int contId = 1;
     int menuInformes= 'N';
     char continuarInformes;
+    int promedioSal;
     eEmpleados lista[TAM];
 
     inicializarEmpleados(lista, TAM);
@@ -36,7 +37,7 @@ int main()
     switch (menu){
 
         case 1:
-            altaEmpleados (lista, TAM, contId);
+            contId=altaEmpleados (lista, TAM, contId);
             pausa();
             clscreen();
             break;
@@ -67,7 +68,7 @@ int main()
                     clscreen();
                     break;
                 case 2:
-
+                    promedioSal=promedioSalarios(lista, TAM);
                     pausa();
                     clscreen();
                     break;
