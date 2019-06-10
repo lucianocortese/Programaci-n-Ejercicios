@@ -33,7 +33,12 @@ LinkedList* ll_newLinkedList(void)
  */
 int ll_len(LinkedList* this)
 {
+
     int returnAux = -1;
+
+    if (this !=NULL){
+        returnAux = this->size;
+    }
 
     return returnAux;
 }
@@ -64,7 +69,43 @@ static Node* getNode(LinkedList* this, int nodeIndex)
  */
 Node* test_getNode(LinkedList* this, int nodeIndex)
 {
-    return getNode(this, nodeIndex);
+
+    Node* lugar=NULL;
+
+    if(this != NULL && NodeIndex>=0 && NodeIndex < ll_len(this))
+
+    return lugar;
+
+    // if(this != NULL && NodeIndex>=0 && NodeIndex < ll_len(this)) -- ASI DIJO EL PROFE
+
+    /*int bandera=0; -- ASI LO HICE YO.
+
+    if (this != NULL){
+
+        for (int i = 0; i<nodeIndex; i++){
+
+            if(bandera=0){
+                lugar= this->pFirstNode;
+            }
+            else{
+
+                lugar= lugar->pNextNode;
+            }
+
+            bandera=1;
+
+        }
+
+    }
+    else{
+
+        printf("No se encontro espacio en memoria");
+
+    }
+
+    return getNode(this, nodeIndex);*/
+
+
 }
 
 
